@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Akronim&family=Bangers&family=Bungee+Shade&family=Shizuru&family=Sirin+Stencil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanalei&family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap');
+@font-face {
+    font-family: out_text;
+    src: url(Aerstriko.ttf);
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+}
+.announcent_banner
+{
+    background-color:#FF0000;
+    font-family: 'Hubballi', cursive;
+    font-size: 1rem;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.announcent_banner a
+{
+    color: #fff;
+    font-weight: bolder;
+}
+input[type=text]
+{
+    background-color: #000;
+}
+input::placeholder
+{
+    font-weight: 600;
+    color: #444;
+    font-size: 1.1rem;
+}
+.container
+{
+    font-family: 'Hubballi', cursive;
+    font-size: 1.2rem;
+}
+.br
+{
+    border-right: solid 2px #FF0000;
+}
+/* Carosuel */
+.carousel-open:checked+.carousel-item {
+    position: static;
+    opacity: 100;
+  }
+
+  .carousel-item {
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+  }
+
+  #carousel-1:checked~.control-1,
+  #carousel-2:checked~.control-2,
+  #carousel-3:checked~.control-3 {
+    display: block;
+  }
+
+  .carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+  #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+  #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #FF0000;
+    /*Set to match the Tailwind colour you want the active one to be */
+  }
+
+.out-text
+{
+    font-family: out_text;;
+    color:#000;
+    -webkit-text-stroke: 0.1px #fff;
+    letter-spacing: 2.5px;
+}
+.headline
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+.product img
+{
+    height: 280px;
+    padding-top: 20px;
+}
+.product img:hover
+{
+    animation: var(--animation-scale-down) forwards;
+}
+.product h1,.new-launch h1
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.trending img:hover
+{
+    animation: var(--animation-pulse) forwards;
+}
+/* Search btn CSS */
+.box input
+{
+    flex: 1;
+}
+.box
+{
+    border: 1px solid #fff;
+    border-radius: 40px;
+}
+.features
+{
+    list-style: square inside url("sqpurple.gif");
+}
+.new-launch
+{
+    background-color: #F0EAE5;
+    padding-bottom: 50px;
+}
+.blaze_content
+{
+    text-align: center;
+}
+.new-launch img
+{
+    animation: var(--animation-pulse) forwards;
+}
+.new-launch .container
+{
+    background-color: #000;
+}
+footer input::placeholder
+{
+    font-weight: 300;
+    color: rgb(156 163 175);
+    font-size: 1rem;
+}
+.dwn-app
+{
+    font-size: var(--font-size-fluid-1);
+}
+.sub-btn:hover
+{
+    background-color: #c0392b;
+    transition: 0.4s;
+}
+footer li a:hover
+{
+    cursor: pointer;
+}
+/* Media Query */
+@media only screen and (max-width: 390px) {
+    .downloads button
+    {
+        font-size: 10px;
+    }
+    .swiper h1::before{
+      margin-left: 30px;
+    }
+    .swiper img{
+      padding-bottom: 20px;
+    }
+    .read-btn
+    {
+      margin-bottom: 5px;
+    }
+}
+@media only screen and (max-width: 765px) {
+  .swiper h1::before{
+    margin-left: 30px;
+  }
+}
+/* tooltip CSS */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  font-family: 'Hubballi', cursive;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  .img-gallery img
+  {
+      transform: scale(101%);
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+  }
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .gallery-items:hover img{
+    opacity: 0.4;
+  }
+  .gallery-items:hover
+  {
+      cursor: pointer;
+  }
+  .gallery_icon{
+      opacity: 0;
+  }
+  .gallery-items:hover .middle {
+    opacity: 1;
+  }
+  .gallery-items:hover .gallery_icon {
+    opacity: 1;
+  }
+  .text {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--font-size-fluid-2);
+  }
+  .para-text
+  {
+    color: white;
+  }
+  .gallery-items:hover .gallery_text
+  {
+      opacity: 0;
+  }
+  .gallery_text,.sub-text,.blog-title,.blog-content,.review-title,.reviews,.box-content,.swiper,.iconic-features{
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+.swiper
+{
+  background-color: #363636;
+}
+.swiper h1
+{
+  color: #FF0000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-size: var(--font-size-fluid-2);
+  width: 500px;
+  height: 70px;
+  position: relative;
+  padding-top: 20px;
+  margin-top: 50px;
+}
+.swiper h1::before{
+  content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 30%;
+    border-top: 3px solid red;
+}
+.swiper .boatname
+{
+  color: #FF0000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--font-size-fluid-1);
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.swiper span
+{
+  font-weight: bold;
+}
+.boat-blog img
+{
+  filter: grayscale(100%);
+}
+.boat-blog img:hover
+{
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+
+.blog-content:hover
+{
+  color: #FF0000;
+  transition: 200ms;
+}
+.read-btn a
+{
+  border: 1px solid #FF0000;
+  font-family: 'Montserrat', sans-serif;
+}
+.review-section img
+{
+  transform: translateY(100px);
+  height: auto;
+  max-width: 17rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dummy-div
+{
+  background-color: #EB2128;
+  width: auto;
+  height: 130px;
+}
+
+
+/* CARD CSS */
+.review-section .box-content
+{
+  background-color: #EB2128;
+  margin-left: auto;
+  margin-right: auto;
+}
+.box-content h6
+{
+  font-size: 0.8rem;
+}
+.quotes
+{
+  background-color: #000;
+}
+.sponsors img
+{
+  filter: grayscale(100%);
+}
+.sponsors img:hover
+{
+  filter: grayscale(0%);
+  cursor: pointer;
+}
+.ranking-img img
+{
+  width: 73vw;
+}
+.fa-truck
+{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  
+}
+.fa-truck,.fa-tags,.fa-shield
+{
+  color: #E82021;
+}
+.iconic-features
+{
+  background-color: #1C1C1C;
+  color: #fff;
+}
+.sub-text
+{
+  background-color: #2c2c2c;
+  color: #727172;
+  text-shadow: 0.5px 0.5px #000;
+}
+.JL-section img{
+  transform: scale(0.8);
+}
